@@ -1,4 +1,4 @@
-# Stage 6 activities and evidence
+﻿# Stage 6 activities and evidence
 
 Complete this one group record. Link actual issues, diffs, tests and reviews; avoid copying entire histories. Blank fields are intentional. Duplicate rows as needed. Use synthetic data only. Every member records their own meaningful contribution. Do not invent results, reviews or Copilot use.
 
@@ -7,7 +7,7 @@ Complete this one group record. Link actual issues, diffs, tests and reviews; av
 - Repository URL: (https://github.com/carrie-mack-sulli/st1-assignment-3)
 - Original Starting SHA:0db72f2
 - Repository restructuring: After the original Starting SHA, the folders were restructured to bring the starter files under the repository root. This change was committed separately.
-- Assignment work commencement SHA: 9a1f7eb — 'Move SmartCare starter files to repository root'
+- Assignment work commencement SHA: 9a1f7eb ΓÇö 'Move SmartCare starter files to repository root'
 - Feature branch: feature/FR-02-patient-search
 - Feature branch created from: 9a1f7eb (main and origin/main pointed to this commit when the branch was created).
 
@@ -34,7 +34,7 @@ Complete this one group record. Link actual issues, diffs, tests and reviews; av
 5. Code and tests are committed to Git.
 6. The commit reference and supporting evidence are recorded.
 - Owner: carrie-mack-sulli - individual completion approved by Pranav.
-- Actual issue link: [[response]](https://github.com/carrie-mack-sulli/st1-assignment-3/issues/1)
+- Actual issue link: (https://github.com/carrie-mack-sulli/st1-assignment-3/issues/1)
 
 ### FR-06 Appointment Cancellation with FR-07 retained history
 
@@ -58,14 +58,14 @@ Complete this one group record. Link actual issues, diffs, tests and reviews; av
 5. Code and tests are committed to Git.
 6. The commit reference and supporting evidence are recorded.
 - Owner: carrie-mack-sulli - individual completion approved by Pranav.
-- Actual issue link: [[response]](https://github.com/carrie-mack-sulli/st1-assignment-3/issues/2)
+- Actual issue link: (https://github.com/carrie-mack-sulli/st1-assignment-3/issues/2)
 
 ## B Commit quality
 
 | Original example | Strong or Weak | Reason                                                                                                                       |
 |---|----------------|------------------------------------------------------------------------------------------------------------------------------|
 | changes | Weak           | Message does not explain what was changed or why. A reviewer cannot easily understand the purpose of the commit.             |
-| final version | Weak           | Feature or fix is not identified. “final version” does not explain the specific change, its purpose or why it was conducted. |
+| final version | Weak           | Feature or fix is not identified. ΓÇ£final versionΓÇ¥ does not explain the specific change, its purpose or why it was conducted. |
 | Add patient search by ID | Strong         | This identifies the feature being added and how patients are to be searched. This provides a good overview of the change.    |
 | fix stuff | Weak           | No information is provided on what has been changed.                                                                         |
 | Prevent cancellation of completed appointments | Strong         | Explicity describes what the change is and expected behaviour.                                                               |
@@ -89,7 +89,7 @@ GitHub Copilot says: "Looks good; tests pass."
 - Follow-up review question 3: What were the outputs when a blank ID or unknown ID is entered? What were the outputs of searching appointments that are cancelled or completed? Show exception handling tests.
 - Follow-up review question 4: Does the cancellation feature retain the original appointment object in the data store and history? Which test results demonstrate this?
 - Follow-up review question 5: Did changes modify patient fields or other services? List unintended scope changes and explain any risks associated with these.
-- Additional questions if useful: [response]
+- Additional questions if useful: N/A
 
 ## E Team workflow agreement
 
@@ -108,138 +108,183 @@ Create at least two focused issues. Add a linked practitioner-lookup issue or an
 
 | Issue link | Requirement | Owner | Acceptance criteria or precise link | Status     |
 |---|---|---|---|------------|
-| (https://github.com/carrie-mack-sulli/st1-assignment-3/issues/1) | FR-02 Patient Search — implement PatientService.find_patient(patient_id) | carrie-mack-sulli | Returns the same stored patient object for a matching trimmed ID; raises ValueError for blank input and LookupError for a valid but unknown ID; matching is case-sensitive.| Open       |
-| (https://github.com/carrie-mack-sulli/st1-assignment-3/issues/2) | FR-06 Appointment Cancellation and FR-07 retained history — implement AppointmentService.cancel_appointment(appointment_id). | carrie-mack-sulli | Cancels only scheduled appointments, returns the same object, retains the appointment record, raises LookupError for an unknown ID and ValueError for disallowed cancellation states. | Open |
-| (https://github.com/carrie-mack-sulli/st1-assignment-3/issues/3) | Supporting Stage 6 target — implement PractitionerService.find_practitioner(practitioner_id). | carrie-mack-sulli | Returns the same stored practitioner object for a matching trimmed ID; raises ValueError for blank input and LookupError for a valid but unknown ID; matching is case-sensitive. | Open |
+| (https://github.com/carrie-mack-sulli/st1-assignment-3/issues/1) | FR-02 Patient Search ΓÇö implement PatientService.find_patient(patient_id) | carrie-mack-sulli | Returns the same stored patient object for a matching trimmed ID; raises ValueError for blank input and LookupError for a valid but unknown ID; matching is case-sensitive.| Open       |
+| (https://github.com/carrie-mack-sulli/st1-assignment-3/issues/2) | FR-06 Appointment Cancellation and FR-07 retained history ΓÇö implement AppointmentService.cancel_appointment(appointment_id). | carrie-mack-sulli | Cancels only scheduled appointments, returns the same object, retains the appointment record, raises LookupError for an unknown ID and ValueError for disallowed cancellation states. | Open |
+| (https://github.com/carrie-mack-sulli/st1-assignment-3/issues/3) | Supporting Stage 6 target ΓÇö implement PractitionerService.find_practitioner(practitioner_id). | carrie-mack-sulli | Returns the same stored practitioner object for a matching trimmed ID; raises ValueError for blank input and LookupError for a valid but unknown ID; matching is case-sensitive. | Open |
 
 ## G Pull request evidence
 
 Repeat this block per PR. Record actual events, not planned approvals.
 
-- PR link and title: [response]
-- Linked issue and requirement: [response]
-- Feature branch: [response]
-- Changed behaviour: [response]
-- Meaningful commits: [links]
-- Test command, directory and observed result: [response]
-- Another-member reviewer: [response]
-- Human observations recorded before Copilot: [link and time]
-- Requirement, responsibilities, test assertions and unrelated-scope checks: [response]
-- Key feedback: [response]
-- Author response/change and verification: [response]
-- Reviewer recheck and approval: [link]
-- Merge outcome and SHA: [response]
-- Significant Copilot assistance: [summary or none]
-- Linked issue closure: [response]
-- Each member updated main: [member and confirmation]
-- Integrated verification after merge: [command, directory, result and code SHA]
+- PR link and title: (https://github.com/carrie-mack-sulli/st1-assignment-3/pull/4) - Implement patient search and appointment cancellation
+- Linked issue and requirement:
+  - Patient search: #1 ΓÇö FR-02 Patient Search by patient ID
+  - Appointment cancellation and retained history: #2 ΓÇö FR-06 Appointment Cancellation with FR-07 retained history
+  - Supporting Stage 6 functionality: #3 ΓÇö Practitioner lookup by ID
+- Feature branch: feature/FR-02-patient-search
+- Changed behaviour:
+  - Implement patient lookup by ID, including invalid and unknown ID exception handling.
+  - Implement practitioner lookup by ID, including invalid and unknown ID exception handling.
+  - Implement appointment cancellation through the transition method, retaining cancelled appointments in the store.
+- Meaningful commits: (https://github.com/carrie-mack-sulli/st1-assignment-3/pull/4/changes/2077c5dad4cc0a43c831cf064b5b759b148960c0)
+- Test command, directory and observed result:
+  - Command: ..venv\Scripts\python.exe -m pytest
+  - Working directory: project/
+  - Result: 16 passed in 0.03 seconds.
+- Another-member reviewer: N/A - approved individual completion arrangement; this activity requires another group member.
+- Human observations recorded before Copilot: (https://github.com/carrie-mack-sulli/st1-assignment-3/pull/4#issuecomment-6482724902), 29 October 2026 09:50AM
+- Requirement, responsibilities, test assertions and unrelated-scope checks:
+  - Requirements and responsibilities
+    - FR-02 - Find a patient by patient ID
+    - FR-03 - Practitioner lookup as a supporting operation
+    - FR-06 - Cancel only a SCHEDULED appointment
+    - FR-07 - Retain cancelled appointments in current-session history
+- Test assertions
+  1.	Patient lookup returns the same stored patient object and allows a trimmed ID.
+  2.	Blank patient IDs raise ValueError; unknown and case-mismatched IDs raise LookupError.
+  3.	Practitioner lookup returns the same stored practitioner object and allows a trimmed ID.
+  4.	Blank practitioner IDs raise ValueError; unknown and case-mismatched IDs raise LookupError.
+  5.	Successful cancellation changes the status, returns the same appointment object, and preserves the appointment in the store.
+  6.	Blank appointment IDs raise ValueError; unknown appointment IDs raise LookupError.
+  7.	Repeated cancellation raises ValueError without changing the cancelled status or removing the stored appointment.
+  8.	Cancelling a completed appointment raises ValueError without changing its status or removing the stored appointment.
+
+- Test execution: Please refer to section in markdown titled Testing to view recorded testing and console verification outputs.
+  - Unrelated-scope checks
+    - The changes were limited to the Stage 6 service methods, the new service test file, and the Stage 6 evidence file.
+    - Existing data-store and domain behaviour was reused.
+    - Appointment cancellation uses the domain transition method and does not directly assign the appointment status or delete the record.
+    - The Stage 9 list_practitioner_appointments placeholder has not been changed or updated at this stage.
+    - FR-01 patient registration, FR-03 practitioner registration, FR-04 booking, and FR-05 practitioner-time conflict prevention were not identified as new implementations in this change.
+    - FR-08 appointment lookup was not identified as a new implementation in this change.
+    - FR-09 practitioner appointment listing was not implemented as part of this change.
+    - FR-10 between-session persistence is retired and was
+
+- Key feedback: N/A - approved individual completion arrangement; this activity requires another group member.
+- Author response/change and verification: N/A - approved individual completion arrangement; this activity requires another group member.
+- Reviewer recheck and approval: N/A - approved individual completion arrangement; this activity requires another group member.
+- Merge outcome and SHA: b953cdc
+- Significant Copilot assistance: Restricted to structuring my content into a logical and concise order.
+- Linked issue closure:
+  - https://github.com/carrie-mack-sulli/st1-assignment-3/issues/1
+  - https://github.com/carrie-mack-sulli/st1-assignment-3/issues/2
+  - https://github.com/carrie-mack-sulli/st1-assignment-3/issues/3
+- Each member updated main: Carrie Sullivan conducted all activities in Stage06 except independant review.
+- Integrated verification after merge: .\.venv\Scripts\python.exe -m pytest; directory: project/; result: 16 passed in 0.05s (8 service tests and 8 starter tests); code SHA: b953cdcdc9059b0c1624b55aff4266f883c3c642.
 
 ## H Copilot collaboration record
 
 Record meaningful required use, not every trivial completion. Repeat per significant interaction.
 
-- Member and task: [response]
-- Prompt/purpose and relevant issue/diff: [response]
-- Summary of output: [response]
-- Human check against actual code, requirements and tests: [response]
-- Decision — Accept / Modify / Reject: [select]
-- Reason: [response]
-- Verification/evidence: [link and result]
+- Member and task: Carrie Sullivan asked Copilot to review PR
+- Prompt/purpose and relevant issue/diff: Hi, please conduct a review of #4 pull request between main and feature/FR-02-patient-search. Please also check the relevant issues are linked, that PR corrolates to relevant requirements and confirm that testing is holistic for the implemented changes.
+- Summary of output:
+- Overall Review Conclusion
+Your PR is well-structured, complete, and aligned with the stated requirements. The implementation is clean, the related issues are correctly referenced, and the testing is thorough across all functional and edge-case scenarios.
+
+Final Verdict
+This PR is ready for merge.
+No blockers identified.
+Only optional improvement: add “Closes #X” syntax for automatic issue closure.
+- Human check against actual code, requirements and tests: Documentation of human check can be viewed at https://github.com/carrie-mack-sulli/st1-assignment-3/pull/4#issuecomment-6482724902. An observation of the Copilot response is that it confirma alignment to the requirements, however it has no visibility of them; demonstrating AIs willingness to please.
+- Decision - Accept / Modify / Reject: None
+- Reason: AI suggestions match my human review. No decision required.
+- Verification/evidence: N/A
 
 ## I Human versus Copilot review comparison
 
-- Human reviewer noticed before consulting Copilot: [response]
-- Copilot noticed: [response]
-- Overlap: [response]
-- What did the human reviewer notice that Copilot did not: [response]
-- What did Copilot identify that the human reviewer initially missed: [response]
-- Unsupported or incorrect Copilot suggestion: [response or none identified with explanation]
-- Human judgement accepted, modified or rejected, and why: [response]
-- Which evidence justified merge approval: [response]
+- Human reviewer noticed before consulting Copilot: Implementation was as expected
+- Copilot noticed: Large majority of implementation was as expected, with exception of Note: The PR does not use GitHub’s auto‑closing syntax (e.g., “Closes #1”), but the linkage is still clear and traceable.
+- Overlap: All key areas of the review
+- What did the human reviewer notice that Copilot did not: Effective connection to requirements.
+- What did Copilot identify that the human reviewer initially missed: Nothing
+- Unsupported or incorrect Copilot suggestion: Copilot highlighted a note rather than a suggestion; NNote: The PR does not use GitHub’s auto‑closing syntax (e.g., “Closes #1”), but the linkage is still clear and traceable. This was unsupported as I didn't feel it necessary to circle back and correct it.
+- Human judgement accepted, modified or rejected, and why: Rejected, as noted in above dot point
+- Which evidence justified merge approval: AI review matched my human review
 
 ## J Contributions
 
 Repeat per member. Include only categories that describe actual work; write not applicable where appropriate. Pairing or mentoring can be supported by a short corroborated note.
 
-- Member: [response]
-- Implementation: [work and evidence]
-- Testing: [work and evidence]
-- Review: [work and evidence]
-- Issue refinement: [work and evidence]
-- Design and responsibility discussion: [work and evidence]
-- Debugging or integration: [work and evidence]
-- Documentation or team support: [work and evidence]
+- Member: Carrie Sullivan
+- Implementation: All aspects of Stage06 demonstrated through individual completion of ST1-Assignment-3
+- Testing: All documented testing for ST1-Assignment-3
+- Review: N/A - approved individual completion arrangement; this activity requires another group member.
+- Issue refinement: Supporting Stage 6 functionality: #3 ΓÇö Practitioner lookup by ID could have been updated to align with requirement FR-03 Register a practitioner with unique ID, name and specialty. Practitioner lookup is a supporting operation. However, I had closed the issue before considering this as an option.
+- Design and responsibility discussion: N/A - approved individual completion arrangement; this activity requires another group member.
+- Debugging or integration: N/A
+- Documentation or team support: Carrie Sullivan demonstrated through all Stage06 content documented across files of .md, .py and GitHub.
 
 ## K Exit question
 
 Why is a high commit count not necessarily evidence of strong contribution?
 
-[response]
+A high commit count measures how many times changes have been made. This does not demonstrate quality of the changes. What should be sought is high quality changes with sufficient testing, documentation and no impact to other features.
 
 ## L Stage 6 formative questions
 
 1. What is version control?
 
-[response]
+A history of changes to provide an audit trail of updates.
 
 2. Why is a feature branch useful?
 
-[response]
+Because it allows an individual developer to work on a single feature, away from the core code.
 
 3. What makes a commit a good engineering commit?
 
-[response]
+A good commit should be small and concise. This allows targeted implementation that is easy to track.
 
 4. What is a pull request?
 
-[response]
+It is a change in one branch that is to be merged into another branch, once comparison is validated.
 
 5. What is the purpose of code review?
 
-[response]
+To ensure accuracy that intended implementation is as expected. Having a second set of eyes is critical to all development work.
 
 6. What does a Git diff show?
 
-[response]
+It shows the difference between 2 versions, allowing easy visibility and comparison of changes.
 
 7. What is a Definition of Done?
 
-[response]
+A list of criteria that has been defined and agreed between developers and business, that is to be achieved for a feature to be considered complete.
 
 8. What is the appropriate role of GitHub Copilot in pull-request review?
 
-[response]
+To assist a human review by checking changes are implemented correctly, alignment is made with requirements, identifying improvements and bugs.
 
 9. Why should individual contribution not be judged only by commit count?
 
-[response]
+Because team members contribute in a variety of ways to ensure the shared goal is met and a quality outcome is achieved.
 
 10. What is the Stage 6 engineering rule?
 
-[response]
+To implement the identified changes while retaining exiting domain rules.
 
 ## M Completion and handover
 
-- Starting SHA: [response]
-- Final Stage 6 code SHA: [response]
-- Test command: [response]
-- Working directory: [response]
-- Observed result: [response]
-- PR and another-member reviewer: [links]
-- Unresolved issue or none: [response]
-- Stage 7 handover status: [ready for tutor checkpoint / unresolved work]
-- Final submitted SHA if later than tested SHA: [response and evidence-only difference]
+- Starting SHA: 9a1f7eb
+- Final Stage 6 code SHA: 2077c5d
+- Test command: .\.venv\Scripts\python.exe -m pytest
+- Working directory: project/
+- Observed result: 16 tests passed in 0.03 seconds.
+- PR and another-member reviewer: (https://github.com/carrie-mack-sulli/st1-assignment-3/pull/4). Self and Copilot reviews conducted, no review performed by another team member as assignment is approved for individual completion.
+- Unresolved issue or none: None
+- Stage 7 handover status: ready for tutor checkpoint
+- Final submitted SHA if later than tested SHA: b953cdc
 
-- [ ] Three Stage 6 service targets completed and checked.
-- [ ] Original supplied tests retained and passing.
-- [ ] At least two focused issues link requirements and acceptance criteria.
-- [ ] Feature work reviewed by another member using the actual diff.
-- [ ] Human-first review and required Copilot comparison recorded.
-- [ ] Feedback resolved and approval recorded before merge.
-- [ ] Everyone pulled main and integrated checks passed.
-- [ ] Required activities, quiz responses and contribution notes completed.
-- [ ] Only synthetic data included; confidential peer material kept out.
-- [ ] Tutor can trace a requirement through issue, code, tests, PR and checkpoint.
+- [Y ] Three Stage 6 service targets completed and checked.
+- [Y ] Original supplied tests retained and passing.
+- [Y ] At least two focused issues link requirements and acceptance criteria.
+- [N/A ] Feature work reviewed by another member using the actual diff.
+- [Y ] Human-first review and required Copilot comparison recorded.
+- [N/A ] Feedback resolved and approval recorded before merge.
+- [N/A ] Everyone pulled main and integrated checks passed.
+- [Y ] Required activities, quiz responses and contribution notes completed.
+- [Y ] Only synthetic data included; confidential peer material kept out.
+- [Y ] Tutor can trace a requirement through issue, code, tests, PR and checkpoint.
 
 Do not write a file's own future commit SHA into that file. Record the tested code SHA first, then commit the evidence; explain the difference when submitting.
 
