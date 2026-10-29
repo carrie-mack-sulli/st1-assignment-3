@@ -35,7 +35,10 @@ class PatientService:
         a blank/invalid ID. It must not create a replacement patient.
         The starter deliberately raises NotImplementedError.
         """
-        raise NotImplementedError('Stage 6: patient lookup')
+        patient = self.data_store.find_patient(patient_id)
+        if patient is None:
+            raise LookupError('Patient not found')
+        return patient
 
 
 class PractitionerService:
@@ -71,7 +74,12 @@ class PractitionerService:
         practitioner. The starter deliberately raises
         NotImplementedError.
         """
-        raise NotImplementedError('Stage 6: practitioner lookup')
+        practitioner = self.data_store.find_practitioner(
+            practitioner_id,
+        )
+        if practitioner is None:
+            raise LookupError('Practitioner not found')
+        return practitioner
 
 
 class AppointmentService:
@@ -139,7 +147,9 @@ class AppointmentService:
         Return the cancelled object. Unknown IDs raise LookupError;
         invalid transitions raise ValueError and leave state unchanged.
         """
-        raise NotImplementedError('Stage 6: appointment cancellation')
+        appointment = self.find_appointment(appointment_id)
+        appointment.cancel()
+        return appointment
 
     def list_practitioner_appointments(
         self,
