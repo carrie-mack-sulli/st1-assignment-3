@@ -34,6 +34,75 @@ def foundation():
         appointment_service,
     )
 
+def test_register_and_store_patient():
+    data_store, patient, practitioner, patient_service, _, _ = foundation()
+
+    registered = patient_service.register_patient("P2", "Morgan Example")
+
+    assert registered.patient_id == "P2"
+    assert registered.name == "Morgan Example"
+    assert data_store.find_patient("P2") is registered
+
+def test_register_and_store_practitioner():
+    data_store, _, _, _, practitioner_service, _ = foundation()
+
+    registered = practitioner_service.register_practitioner(
+        "D2", "Jordan Example", "Cardiology"
+    )
+
+    assert registered.practitioner_id == "D2"
+    assert registered.name == "Jordan Example"
+    assert registered.specialty == "Cardiology"
+    assert data_store.find_practitioner("D2") is registered
+
+def test_book_and_retrieve_appointment():
+    data_store, patient, practitioner, _, _, appointment_service = foundation()
+    appointment_time = datetime(2026, 10, 1, 9, 0)
+
+    appointment = appointment_service.book_appointment(
+        "A1", patient.patient_id, practitioner.practitioner_id, appointment_time
+    )
+
+    retrieved = appointment_service.find_appointment("A1")
+
+    assert retrieved is appointment
+    assert retrieved.patient is patient
+    assert retrieved.practitioner is practitioner
+    assert retrieved.date_time == appointment_time
+    assert retrieved.status is AppointmentStatus.SCHEDULED
+    assert data_store.find_appointment("A1") is appointment
+
+def test_find_appointment_rejects_unknown_id():
+    _, _, _, _, _, appointment_service = foundation()
+
+    with pytest.raises(LookupError):
+        appointment_service.find_appointment("UNKNOWN")
+
+def test_cancelled_appointment_does_not_block_slot():
+    (
+        data_store,
+        patient,
+        practitioner,
+        _,
+        _,
+        appointment_service,
+    ) = foundation()
+    appointment_time = datetime(2026, 10, 1, 9, 0)
+
+    original = appointment_service.book_appointment(
+        "A1", patient.patient_id, practitioner.practitioner_id, appointment_time
+    )
+    appointment_service.cancel_appointment("A1")
+
+    replacement = appointment_service.book_appointment(
+        "A2", patient.patient_id, practitioner.practitioner_id, appointment_time
+    )
+
+    assert original.status is AppointmentStatus.CANCELLED
+    assert replacement.status is AppointmentStatus.SCHEDULED
+    assert appointment_service.find_appointment("A1") is original
+    assert appointment_service.find_appointment("A2") is replacement
+    assert data_store.find_appointment("A1") is original
 
 def test_find_patient_returns_stored_object_and_accepts_trimmed_id():
     data_store, patient, _, patient_service, _, _ = foundation()
