@@ -322,10 +322,10 @@ Optional fixtures/parametrisation used and why, if any: No pytest fixtures or pa
 
 Use links rather than copying GitHub history. Continue the Stage 6 workflow; no commit/PR count, conflict or individual test quota is imposed.
 
-| Issue/task         | Branch                      | PR                                  | Reviewer | Key feedback | Outcome                                 |
-|--------------------|-----------------------------|-------------------------------------|----------|--------------|-----------------------------------------|
-| Human-first design | feature/stage07-test-design | Add Stage 7 human-first test design | N/A      | N/A          | Human-first design committed and merged |
-| complete           | complete                    | complete                            | complete | complete     | complete                                |
+| Issue/task                       | Branch                      | PR                                                 | Reviewer | Key feedback | Outcome                                         |
+|----------------------------------|-----------------------------|----------------------------------------------------|----------|--------------|-------------------------------------------------|
+| Human-first design               | feature/stage07-test-design | Add Stage 7 human-first test design                | N/A      | N/A          | Human-first design committed and merged         |
+| Stage 7 testing and verification | feature/stage07-test-design | Complete Stage 7 testing and verification evidence | N/A      | N/A          | Testing evidence committed, reviewed and merged |
 
 ## M Contribution Evidence
 
@@ -369,9 +369,17 @@ A test must prove the required behaviour it is designed to check.
 
 ## O Stage Completion
 
-Tested Stage 7 main SHA: [complete]
-Full-suite result: [complete]
+Tested Stage 7 main SHA: cf4e6831cf349deaf3b87db8997c8a00f702f222
+Full-suite result: ![O Stage Completion - Full-suite result.png](O%20Stage%20Completion%20-%20Full-suite%20result.png)
 Unresolved defects and effect on baseline: None
-Clean working tree and integration evidence: [complete]
-Stage 8 handover status: [complete; no Stage 8 work assigned]
-All tutorial/formative responses and traceability/Copilot decisions complete: [confirm]
+Clean working tree and integration evidence: clean working tree will be achieved after final updated made to this .md. The below shows the last changes to be committed, pushed, PR'd and merged prior to conclusion of all Stage07 activities.
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   ../stage07/O Stage Completion - Full-suite result.png
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ../stage07/stage07_activities_and_evidence.md
+Stage 8 handover status: No Stage 8 work assigned
+All tutorial/formative responses and traceability/Copilot decisions complete: N/A
