@@ -4,9 +4,9 @@ UG and PG | One evolving group project | Complete this blank record using the St
 
 All Assignment 3 stage materials are provided from the beginning. Complete this stage only after the previous applicable stage has been integrated, verified and recorded. Use this supplied record in stage08/ in your EXISTING repository. Preserve project/, all earlier tests, records and responses. Do not download another starter or copy staff solutions. The Stage 8 preparation utility is supplied or run by teaching staff when Stage 8 begins. Follow your tutor’s controlled workflow and the handout. If temporarily supplied, keep it outside the repository in a sibling Stage_8_Assets/ folder; exclude it from Git and the final submission.
 
-Group/tutorial: [complete]
-Members and UG/PG cohorts: [complete]
-Record owner / contribution links for each member: [complete]
+Group/tutorial: Group Exception 1
+Members and UG/PG cohorts: Carrie Sullivan
+Record owner / contribution links for each member: N/A - approved individual completion arrangement
 
 Use concise results and accessible artefact links rather than copying entire logs. Keep human-first entries before consulting GitHub Copilot. Link shared evidence once; do not repeat it across sections. No entries below are specimen answers or claimed results.
 
@@ -15,18 +15,27 @@ Use concise results and accessible artefact links rather than copying entire log
 ### A.1 Classify all five statements
 For each, choose symptom, evidence or hypothesis/opinion, and explain your reason. These are discussion statements, not confirmed diagnoses.
 - Appointment disappears after cancellation.
+  - Response and reason: Symptom; because it is describing that an appointment has disappeared after it has been cancelled, but it is not known why.
 - The data-store removal path is probably being called.
+  - Response and reason: Hypothesis/opinion; because it sounds like an opinion based on something that has been observed.
 - The failing test shows store.find_appointment('A1') returns None.
+  - Response and reason: Evidence; because a specified output has been returned to state what the failure is.
 - The service layer is badly designed.
+  - Response and reason: Hypothesis/opinion; the statement is a judgement about the quality of the design. It doesn't identify a specific problem or identify improvements.
 - Traceback points to smartcare/services.py line 42 in the example.
+  - Response and reason: Evidence; a traceback shows the code location where an exception was raised, allowing investigation of an issue.
 The example line number is illustrative; inspect the actual line in your run. The removal hypothesis must be tested against the current project, which has no public delete operation.
-
-Response and reason: [complete]
 
 ### A.2 Build a debugging record
 Choose the cancelled-history scenario or a same-practitioner/time booking. Before changing code, record expected behaviour, observed behaviour, minimal reproduction, a hypothesis and evidence to inspect. Use a requirement to justify the expectation. Keep the initial hypothesis even if later evidence disproves it.
 
 Response and reason: [complete]
+- Record expected behaviour: When an appointment is cancelled, its status should change to CANCELLED. The appointment should remain in the data store, retain its history and still be retrievable. Cancelling it should not remove the appointment record.
+- Observed behaviour:
+- Minimal reproduction: 
+- A hypothesis and evidence to inspect:
+- Requirement to justify the expectation: FR-06 and FR-07 require the cancellation behaviour and retention of appointment history. AC-05.2 protects that retained history. Therefore, cancellation should change the appointment's status without deleting the appointment record.
+Keep the initial hypothesis even if later evidence disproves it.
 
 ### A.3 Test defect or product defect
 A test expects cancelled appointments to be deleted, but FR-07 says history must be retained. What should be changed? Explain why. Also decide whether a test expecting different practitioners at the same time to conflict reflects AC-04.2. Do not assume every failing test is correct.

@@ -9,3 +9,4 @@ __pycache__/
 .stage8-check-*/
 .stage8-verify-*/
 .idea/
+prepare_debugging.py
