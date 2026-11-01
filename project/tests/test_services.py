@@ -5,12 +5,13 @@ from datetime import datetime
 import pytest
 
 from smartcare.data_store import SmartCareDataStore
-from smartcare.domain import AppointmentStatus
+from smartcare.domain import Appointment, AppointmentStatus
 from smartcare.services import (
     AppointmentService,
     PatientService,
     PractitionerService,
 )
+
 
 
 def foundation():
@@ -205,3 +206,114 @@ def test_completed_appointment_cannot_be_cancelled():
     assert completed.status is AppointmentStatus.COMPLETED
     assert appointment_service.find_appointment("A2") is completed
     assert data_store.list_appointments() == [appointment, completed]
+
+def test_list_practitioner_appointments_returns_all_statuses():
+    (
+        data_store,
+        patient,
+        practitioner,
+        _,
+        _,
+        appointment_service,
+    ) = foundation()
+
+    scheduled = appointment_service.book_appointment(
+        "A1", "P1", "D1", datetime(2026, 10, 1, 9)
+    )
+
+    cancelled = appointment_service.book_appointment(
+        "A2", "P1", "D1", datetime(2026, 10, 1, 10)
+    )
+    appointment_service.cancel_appointment("A2")
+
+    completed = Appointment(
+        "A3",
+        patient,
+        practitioner,
+        datetime(2026, 10, 1, 11),
+        AppointmentStatus.COMPLETED,
+    )
+    data_store.add_appointment(completed)
+
+    result = appointment_service.list_practitioner_appointments("D1")
+
+    assert result == [scheduled, cancelled, completed]
+    assert result[0] is scheduled
+    assert result[1] is cancelled
+    assert result[2] is completed
+
+
+def test_list_practitioner_appointments_filters_by_status():
+    (
+        data_store,
+        patient,
+        practitioner,
+        _,
+        _,
+        appointment_service,
+    ) = foundation()
+
+    scheduled = appointment_service.book_appointment(
+        "A1", "P1", "D1", datetime(2026, 10, 1, 9)
+    )
+
+    cancelled = appointment_service.book_appointment(
+        "A2", "P1", "D1", datetime(2026, 10, 1, 10)
+    )
+    appointment_service.cancel_appointment("A2")
+
+    completed = Appointment(
+        "A3",
+        patient,
+        practitioner,
+        datetime(2026, 10, 1, 11),
+        AppointmentStatus.COMPLETED,
+    )
+    data_store.add_appointment(completed)
+
+    result = appointment_service.list_practitioner_appointments(
+        "D1", AppointmentStatus.SCHEDULED
+    )
+
+    assert result == [scheduled]
+    assert cancelled not in result
+    assert completed not in result
+
+
+def test_list_practitioner_appointments_returns_empty_for_known_practitioner():
+    (
+        _,
+        _,
+        _,
+        _,
+        practitioner_service,
+        appointment_service,
+    ) = foundation()
+
+    result = appointment_service.list_practitioner_appointments("D1")
+
+    assert result == []
+    assert practitioner_service.find_practitioner("D1").practitioner_id == "D1"
+
+
+def test_list_practitioner_appointments_rejects_unknown_practitioner():
+    _, _, _, _, _, appointment_service = foundation()
+
+    with pytest.raises(LookupError):
+        appointment_service.list_practitioner_appointments("D99")
+
+
+def test_list_practitioner_appointments_rejects_blank_practitioner_id():
+    _, _, _, _, _, appointment_service = foundation()
+
+    with pytest.raises(ValueError):
+        appointment_service.list_practitioner_appointments(" ")
+
+
+def test_list_practitioner_appointments_rejects_invalid_status():
+    _, _, _, _, _, appointment_service = foundation()
+
+    with pytest.raises(ValueError):
+        appointment_service.list_practitioner_appointments(
+            "D1", "scheduled"
+        )
