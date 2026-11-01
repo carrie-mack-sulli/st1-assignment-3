@@ -286,7 +286,7 @@ Before repair and refactor:
 Key human feedback, difference from Copilot findings and response/outcome: N/A - approved individual completion arrangement; this activity requires another group member.
 Actual review approval / merge evidence: PR #8 was merged into main for the earlier Stage 8 investigation and human-first hypothesis work. N/A - approved individual completion arrangement; this activity requires another group member.
 Integrated code SHA and team pull/retest command / working directory / result:
-- Integrated team code SHA: N/A — the repair and refactor commits have not yet been integrated through a subsequent PR. PR #8 merged the earlier Stage 8 investigation and human-first hypothesis work into main.
+- Integrated team code SHA: 237e9bce031d9f58b354da6586c57c75e5738c4e
 - Local full-suite verification: python -m pytest -v
 - Working directory: project/
 - Result after refactor: 41 passed in 0.06s.
@@ -309,58 +309,58 @@ The refactoring only replaced a string-based scheduled-status comparison with th
 
 1. What should an engineer do before changing code in response to a failure?
 
-Response: [complete]
+Response: An engineer should first reproduce the problem, examine the error message and traceback, and inspect the relevant code and tests. They should identify the expected and actual behaviour, investigate the likely cause, and gather evidence for a diagnosis. They should then choose the smallest justified change, add or update regression tests, and verify that the fix resolves the failure without causing new problems.
 
 2. Where should expected behaviour come from during debugging?
 
-Response: [complete]
+Response: Documented requirements, acceptance criteria, specifications and agreed business rules, determine expected behaviour. Existing tests and design documentation can also clarify intended behaviour. Engineers should use these sources as evidence rather than assuming that the current code or a failing test is correct.
 
 3. What is a debugging hypothesis?
 
-Response: [complete]
+Response: A debugging hypothesis is a possible explanation for why a failure is occurring. It is based on available evidence and can be tested through further investigation, such as reproducing the problem, inspecting the code or running targeted tests. A hypothesis is not a confirmed cause until evidence supports it.
 
 4. What is a regression test and why is it retained?
 
-Response: [complete]
+Response: A regression test checks previously fixed or working functionality to ensure it continues to behave as expected after code changes. It is retained so that future changes do not reintroduce an existing defect or break established behaviour.
 
 5. What is meant by root cause?
 
-Response: [complete]
+Response: The underlying problem for causing a defect or failure. It is the specific problem in the code or system that produces the observed symptoms.
 
 6. What is refactoring?
 
-Response: [complete]
+Response: It's the process of improving the internal structure, readability or maintainability of existing code without changing its external behaviour.
 
 7. What is a swallowed exception?
 
-Response: [complete]
+Response: A swallowed exception occurs when a program catches an error but does not properly handle it, report it or pass it on. This can hide underlying problems and make debugging difficult because the program may continue running without showing that something is wrong.
 
 8. What is a code smell?
 
-Response: [complete]
+Response: A code smell is a sign that code isn't quite right and could be improved. It may be difficult to read, understand or maintain. Examples include repeated code, long methods and complicated conditions.
 
 9. How should GitHub Copilot-generated debugging diagnoses be treated?
 
-Response: [complete]
+Response: GitHub Copilot's debugging suggestions should be treated as possible explanations, not confirmed facts. Engineers should check them against the code, requirements and test results before deciding whether to accept or reject them.
 
 10. What is the Stage 8 engineering rule?
 
-Response: [complete]
+Response: Investigate before changing code.
 
 ## L. Completion and handover
 
-- [ ] Existing project, earlier tests and stage records preserved.
-- [ ] Passing Stage 7 SHA and safe preparation details recorded.
-- [ ] Both defects reproduced with meaningful failing tests.
-- [ ] Both human hypotheses recorded before Copilot; actual suggestions evaluated with evidence.
-- [ ] Supported causes and minimal repairs explained; focused and full regression results recorded.
-- [ ] One genuine refactor verified under passing before/after tests.
-- [ ] Human PR review, feedback resolution and integrated retest recorded.
-- [ ] Tutorial, three reflections and ten formative responses complete.
-- [ ] Local recovery metadata excluded from submitted source.
-- [ ] Same project and full suite ready for Stage 9 after Stage 8 integration, verification and recording.
+- [x] Existing project, earlier tests and stage records preserved.
+- [x] Passing Stage 7 SHA and safe preparation details recorded.
+- [x] Both defects reproduced with meaningful failing tests.
+- [x] Both human hypotheses recorded before Copilot; actual suggestions evaluated with evidence.
+- [x] Supported causes and minimal repairs explained; focused and full regression results recorded.
+- [x] One genuine refactor verified under passing before/after tests.
+- [x] Human PR review, feedback resolution and integrated retest recorded.
+- [x] Tutorial, three reflections and ten formative responses complete.
+- [x] Local recovery metadata excluded from submitted source.
+- [x] Same project and full suite ready for Stage 9 after Stage 8 integration, verification and recording.
 
 Verified integrated code SHA / result: see I.
-Submitted SHA and evidence-only difference if any: [complete]
-Unresolved issues or incomplete checks / owner / next action: [complete]
-Handover note: [complete]
+Submitted SHA and evidence-only difference if any: 237e9bce031d9f58b354da6586c57c75e5738c4e.
+Unresolved issues or incomplete checks / owner / next action: No known unresolved Stage 8 defects. The full test suite passed with 41 tests and no failures. Independent peer review was not applicable under the approved individual completion arrangement. Carrie Sullivan: proceed to Stage 9 using the integrated main branch.
+Handover note: Stage 8 is complete. Both appointment defects were reproduced, investigated and repaired. Focused regression tests and the full test suite passed. A small refactor was completed and verified without changing external behaviour. PR #9 was merged into main, and the integrated code passed all 41 tests. The Stage 8 activity record and screenshot evidence have been committed. The project is ready for Stage 9 using the integrated main branch.
