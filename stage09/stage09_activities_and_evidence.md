@@ -153,9 +153,9 @@ Rank findings as Critical, Important or Optional.
 For each finding, identify the code/test evidence to check.
 
 Actual response: [stage09_gitHub_copilot_review.md](stage09_gitHub_copilot_review.md)
-Human design completed before AI: <!-- reference -->
-Actual prompt/context supplied: <!-- paste or accessible reference -->
-Actual response: <!-- accessible reference -->
+Human design completed before AI: Refer to section B
+Actual prompt/context supplied: Refer section E
+Actual response: [stage09_gitHub_copilot_review.md](stage09_gitHub_copilot_review.md)
 
 | AI finding                                                                | Code/test evidence                                                                                                                      | Severity  | Accept/Modify/Reject and reason                                                                                                                                                                                               | Change or no change                                                                                                 | Actual verification                                                                                                                                             |
 |---------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -202,17 +202,17 @@ PR/diff and another-member human reviewer: (https://github.com/carrie-mack-sulli
 Review responses and Copilot comparison: Please refer to section E and [stage09_gitHub_copilot_review.md](stage09_gitHub_copilot_review.md)
 Integrated common Stage 9 SHA: 	233a1fc1237fd244e4a39a32151851ceda46057e
 Full regression command, working directory, actual count/result and evidence: python -m pytest -q
-README run instructions and scope/limitations: <!-- link -->
-Unresolved issues and support/action: <!-- complete -->
-UG common candidate / PG future branch plan: <!-- complete -->
+README run instructions and scope/limitations: [README.md](../project/README.md)
+Unresolved issues and support/action: No known outstanding Stage 9 functional defects following the integrated regression suite and manual console verification. No additional Stage 9 support action is currently required. Independent peer review was not available under the approved individual completion arrangement. Application data remains session-only by design; persistence and PG rescheduling are outside the common Stage 9 scope.
+UG common candidate / PG future branch plan: The integrated common Stage 9 checkpoint is commit 233a1fc1237fd244e4a39a32151851ceda46057e on main. This is the common candidate to preserve for the UG Stage 12 pathway.
 
-- [ ] Query contracts, purity, new lists and named-key ordering verified.
-- [ ] Service empty/unknown/invalid cases and cancellation history verified.
-- [ ] Every console command and invalid-input recovery demonstrated.
-- [ ] Query and workflow tests plus all previous tests pass; actual evidence linked.
-- [ ] Human design, Copilot critique, review and integration recorded honestly.
-- [ ] Reflections and ten formative responses completed.
-- [ ] README updated; earlier code/tests/records preserved.
-- [ ] Common SHA protected for UG Stage 12; PG Stage 10/11 work deferred until approved.
+- [x ] Query contracts, purity, new lists and named-key ordering verified.
+- [x ] Service empty/unknown/invalid cases and cancellation history verified.
+- [x ] Every console command and invalid-input recovery demonstrated.
+- [x ] Query and workflow tests plus all previous tests pass; actual evidence linked.
+- [x ] Human design, Copilot critique, review and integration recorded honestly.
+- [x ] Reflections and ten formative responses completed.
+- [x ] README updated; earlier code/tests/records preserved.
+- [x ] Common SHA protected for UG Stage 12; PG Stage 10/11 work deferred until approved.
 
 No persistence, rescheduling or assurance implementation is part of Stage 9. UG: 6→7→8→9→12. PG: 6→7→8→9→10→11→12. Mixed groups keep one repository and protect the common candidate.
