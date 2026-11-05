@@ -1,5 +1,5 @@
 # SmartCare Application
-Requirements baseline: SmartCare A3 2026 revision 2. Python 3.13 and pytest 8.3.5 verified. Runtime uses only the Python standard library.
+Requirements baseline: SmartCare A3 2026 revision 2. Python 3.14 and pytest 8.3.5 verified. Runtime uses only the Python standard library.
 
 ## Working directory and commands
 Run all application and test commands from this project/ directory, using the approved Python environment with the development dependency installed.
