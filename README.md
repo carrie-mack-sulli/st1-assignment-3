@@ -8,10 +8,10 @@ Baseline: Stage 6 foundation, 2026 revision 2. This starter deliberately leaves 
 - Group and tutorial: Group Exception 1
 - Member names, GitHub usernames and UG/PG cohorts: Carrie Sullivan. GitHub username = carrie-mack-sulli
 - Shared repository URL: (https://github.com/carrie-mack-sulli/st1-assignment-3/blob/9a1f7ebbf299eb1b1f48db5d4786f272f4493805/README.md#L10)
-- Latest completed stage: [complete]
+- Latest completed stage: Stage 12 — Final Release (UG pathway). Release review and evidence completed; final ZIP verification pending.
 - Verified code SHA: Stage12 tested - 9a194c9999cff7b7905078a0e0b74f81d3747d0b
 - Test command, working directory and observed result: python -m pytest -q, from project/; 66 passed in 0.06s.
-- Final submitted SHA, if different from tested code SHA: [complete; explain evidence-only changes]
+- Final submitted SHA, if different from tested code SHA: Final release SHA to be confirmed after final evidence commit and ZIP verification. Tested code SHA: 9a194c9999cff7b7905078a0e0b74f81d3747d0b. Subsequent changes consist of release documentation, README updates, screenshots and removal of obsolete TODO docstrings; no executable behaviour changes.
 
 Do not put student IDs, private peer ratings, credentials or personal contact details here.
 
