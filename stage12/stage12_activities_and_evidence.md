@@ -171,10 +171,10 @@ Common decision / PG decision where different: Common UG release: READY FOR COUR
 
 Exact common tested SHA: 9a194c9999cff7b7905078a0e0b74f81d3747d0b
 Exact PG tested SHA or not applicable: N/A
-Final submitted SHA / repository URL: Final submitted SHA pending the final evidence commit and ZIP verification. Repository: https://github.com/carrie-mack-sulli/st1-assignment-3
+Final submitted SHA / repository URL: 1ef90a589a1f771416e427fef375abc01208aa3f. Repository: https://github.com/carrie-mack-sulli/st1-assignment-3
 Evidence-only later commit and difference explanation: The original Stage 12 regression-tested code SHA is 9a194c9999cff7b7905078a0e0b74f81d3747d0b. Release-preparation commit c012c8933dd9ef28fd8dfb436c39aa9e41f09352 adds Stage 12 documentation, screenshots and README updates, and removes obsolete TODO docstrings from services.py. No executable behaviour was changed. The final submitted SHA will be recorded after the final evidence commit.
 Executable changes after testing and re-verification: No executable behaviour changes have been made since the full regression run. The subsequent services.py change is documentation-only. No additional functional re-verification was required for that change.
-Source ZIP name / SHA correspondence / extracted comparison: SmartCare-release.zip — planned export from the exact final submitted SHA. ZIP creation, extraction and comparison are pending. Independent verification by another group member is N/A under the approved individual completion arrangement; the ZIP will be checked individually.
+Source ZIP name / SHA correspondence / extracted comparison: SmartCare-release.zip was generated using git archive from the exact final submitted SHA, 1ef90a589a1f771416e427fef375abc01208aa3f. The archive was extracted successfully. The expected project structure and application files were present, including the five Stage 7 screenshots initially flagged by a PowerShell filename-encoding mismatch. A complete byte-for-byte comparison was not performed. ZIP verification was completed individually under the approved individual completion arrangement.
 
 
 ## L Submission package verification
@@ -186,13 +186,13 @@ Source ZIP name / SHA correspondence / extracted comparison: SmartCare-release.z
 - [x] Release notes, technical debt and limitations visible.
 - [x] Independent human review, integration and release decision recorded.
 - [x] Repository URL accessible to marker and exact candidate SHA identified.
-- [ ] One source ZIP from submitted commit with root README.md and .gitignore.
-- [ ] project/ source and all accumulated applicable tests included.
-- [ ] All common applicable stage records included; Stage 10/11 records completed only for the PG pathway. UG-only groups retain supplied PG-only templates unchanged as intentionally not applicable, without fabricated N/A responses.
-- [ ] No .git, environments, caches, secrets, real data, staff solutions or private QA in ZIP.
-- [ ] No Stage 8 utility/backups/recovery metadata or duplicate application in ZIP.
-- [ ] Mixed-group common protection and candidate upload routing checked.
-- [ ] Group reflection, confidential individual peer forms and common team viva routed separately.
+- [x] One source ZIP from submitted commit with root README.md and .gitignore.
+- [x] project/ source and all accumulated applicable tests included.
+- [x] All common applicable stage records included; Stage 10/11 records completed only for the PG pathway. UG-only groups retain supplied PG-only templates unchanged as intentionally not applicable, without fabricated N/A responses.
+- [x] No .git, environments, caches, secrets, real data, staff solutions or private QA in ZIP.
+- [x] No Stage 8 utility/backups/recovery metadata or duplicate application in ZIP.
+- [ ] Mixed-group common protection and candidate upload routing checked. - N/A - approved individual completion arrangement; this activity requires another group member.
+- [ ] Group reflection, confidential individual peer forms and common team viva routed separately. - N/A - approved individual completion arrangement; this activity requires another group member.
 
 Confirmed assessment item/upload route: Assignment 3 submission via Canvas using GitHub repository url.
 Deadline/timezone: Original due date and time of 6 November 2026 23:59. Updated due date and time of 9 November 2026 23:59 Canberra AEDT.
